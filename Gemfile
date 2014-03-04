@@ -46,4 +46,5 @@ end
 
 group :development, :test do
   gem 'evergreen', require: 'evergreen/rails'
+  gem 'selenium-webdriver'
 end
