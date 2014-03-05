@@ -1,26 +1,18 @@
-<h1>Listing guitars</h1>
+<h1>For Sale</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Brand</th>
-      <th>Year</th>
       <th>Title</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @guitars.each do |guitar| %>
       <tr>
-        <td><%= guitar.brand %></td>
-        <td><%= guitar.year %></td>
-        <td><%= guitar.title %></td>
-        <td><%= link_to 'Show', guitar %></td>
-        <td><%= link_to 'Edit', edit_guitar_path(guitar) %></td>
-        <td><%= link_to 'Destroy', guitar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to guitar.title, guitar %>
+        </td>
       </tr>
     <% end %>
   </tbody>
