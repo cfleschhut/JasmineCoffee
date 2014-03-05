@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304223346) do
+ActiveRecord::Schema.define(version: 20140305111856) do
 
   create_table "guitars", force: true do |t|
     t.string   "brand"
-    t.string   "year"
+    t.integer  "year",       limit: 255
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
